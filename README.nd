@@ -4,3 +4,5 @@
 # len(name) show how many characters are in a string
 # // is dividing a string
 # Spaces count for the counting.
+# Negative numbers can go backward from being inside [-#] and positive forward from 0.
+# With decimals, the computer can't do anything.
