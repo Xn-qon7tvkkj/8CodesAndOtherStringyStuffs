@@ -15,6 +15,7 @@ lastFirst = lastName + ", " + firstName
 print(lastFirst)
 
 # Repetition
+#   repetition operator: *
 
 print("Hip "*2 + "Hooray!")
 
@@ -25,3 +26,4 @@ def rowYourBoat():
     print("Life is but a dream")
 
 rowYourBoat()
+
