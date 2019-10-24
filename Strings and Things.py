@@ -48,3 +48,12 @@ print(name[-4:8])
 
 for i in range(0, len(name)+1):
     print(name[0:i])
+
+# Searching
+
+print("biv" in name)
+
+if "y" not in name:
+    print("y is not in name")
+else:
+    print("y is in name")
