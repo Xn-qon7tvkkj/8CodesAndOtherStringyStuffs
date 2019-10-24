@@ -27,3 +27,12 @@ def rowYourBoat():
 
 rowYourBoat()
 
+# Indexing
+
+name = "Roy G Biv"
+firstChar = name[0]
+print(firstChar)
+
+middleCharIndex = len(name) // 2
+print(middleCharIndex)
+print(name[middleCharIndex])

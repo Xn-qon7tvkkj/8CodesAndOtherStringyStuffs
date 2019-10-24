@@ -1,2 +1,6 @@
 # Multiply strings
 # You can use repetition in a function of a string.
+# [0] - first character numbered zero, picking the one chronologically from the string/variable.
+# len(name) show how many characters are in a string
+# // is dividing a string
+# Spaces count for the counting.
