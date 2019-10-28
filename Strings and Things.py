@@ -138,4 +138,6 @@ print(str15.replace("this", "This was"))
 
 # Character functions
 
-print(chr(104))
+print(chr(75))
+print(ord('&'))
+
