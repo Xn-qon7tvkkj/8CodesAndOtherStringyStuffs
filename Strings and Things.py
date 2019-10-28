@@ -134,3 +134,8 @@ print(str15.replace("this", "This"))
 print(str15.replace("this", "This was"))
 
     # Be sure to include multiple examples of all of them in use
+
+
+# Character functions
+
+print(chr(104))

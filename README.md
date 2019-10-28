@@ -11,3 +11,6 @@
 # 0 is when it starts.
 # Second number is up to when you stop.
 # Searching checks if a specific string is in the variable. Will list True or False. Not can reverse the result.
+
+# ord() takes letters
+# chr() takes numbers
