@@ -71,7 +71,7 @@ print("Old value:", str)
 print("New value:", str2)
 
 
-    # ljust         aStr.ljust(w)       This method add the symbols at the end of the string. It alsoreturns the string left justified in a string of length width. The original string is returned if width is less than len(s).
+    # ljust         aStr.ljust(w)       This method add the symbols at the end of the string. It also returns the string left justified in a string of length width. The original string is returned if width is less than len(s).
 str3 = "Hello World"
 if str3 == "Hello World":
     str4 = str.ljust(20, '#')
@@ -140,4 +140,3 @@ print(str15.replace("this", "This was"))
 
 print(chr(75))
 print(ord('&'))
-
