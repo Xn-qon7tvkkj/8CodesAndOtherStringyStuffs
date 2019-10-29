@@ -31,3 +31,6 @@ def scramble2Decrypt(cipherText):
     return plainText
 
 # write a stripSpaces(text) function here
+def stripSpaces(plainText):
+    plainText = plainText.replace(" ", "")
+    return plainText

@@ -153,3 +153,4 @@ print(scramble2Encrypt(("THE MEETING IS AT FIVE OCLOCK")))
 
 print(scramble2Encrypt(("H ETN SA IEOLCTEMEIGI TFV COK")))
 print(scramble2Decrypt(scramble2Decrypt(" T AIOCEEG F OHENS ELTMIITVCK")))
+print(stripSpaces("THE MEETING IS AT FIVE OCLOCK"))
