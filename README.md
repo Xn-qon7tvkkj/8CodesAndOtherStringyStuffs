@@ -14,3 +14,5 @@
 
 # ord() takes letters
 # chr() takes numbers
+
+# cipher help with messages and security.
