@@ -16,3 +16,5 @@
 # chr() takes numbers
 
 # cipher help with messages and security.
+
+# caesar cipher is a substitution cipher where each letter in the original message is replaced with a letter corresponding to a certain number of letters shifted up or down in the alphabet.

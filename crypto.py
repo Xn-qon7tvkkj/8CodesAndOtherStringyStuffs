@@ -34,3 +34,10 @@ def scramble2Decrypt(cipherText):
 def stripSpaces(plainText):
     plainText = plainText.replace(" ", "")
     return plainText
+
+
+# write a caesarEncrypt(plainText, shift)
+# write a caesarEncrypt(cipherText, shift)
+def caesarEncrypt(plainText, shift):
+
+def caesarEncrypt(cipherText, shift):
