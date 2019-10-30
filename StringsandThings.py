@@ -157,3 +157,4 @@ print(stripSpaces("THE MEETING IS AT FIVE OCLOCK"))
 
 from cryto import *
 
+print(caesarEncrypt(stripSpaces("THIS IS WITHOUT SPACES"))

@@ -39,5 +39,11 @@ def stripSpaces(plainText):
 # write a caesarEncrypt(plainText, shift)
 # write a caesarEncrypt(cipherText, shift)
 def caesarEncrypt(plainText, shift):
+    msg = input("Enter your message to encrypt: ")
+    cipherText = scramble2Encrypt(msg)
+    print("The encrypted message is: ", cipherText)
 
-def caesarEncrypt(cipherText, shift):
+def caesarDecrypt(cipherText, shift):
+    msg2 = input("Enter your cipher message to decrypt: ")
+    plainText = scramble2Decrypt(msg2)
+    print("The decrypted message is: ", plainText)
