@@ -155,6 +155,7 @@ print(scramble2Encrypt(("H ETN SA IEOLCTEMEIGI TFV COK")))
 print(scramble2Decrypt(scramble2Decrypt(" T AIOCEEG F OHENS ELTMIITVCK")))
 print(stripSpaces("THE MEETING IS AT FIVE OCLOCK"))
 
-from cryto import *
+from crypto import *
 
-print(caesarEncrypt(stripSpaces("THIS IS WITHOUT SPACES"))
+print(caesarEncrypt("", 4))
+print(caesarDecrypt("", -4))
