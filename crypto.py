@@ -37,40 +37,38 @@ def stripSpaces(plainText):
 
 
 # write a caesarEncrypt(plainText, shift)
-# write a caesarEncrypt(cipherText, shift)
+# write a caesarDecrypt(cipherText, shift)
 
 ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
+msg_input = input("Enter your message: ")
+cipher = int(input("Enter your key: "))
+
+n = len(msg_input)
+
+msg_output = ""
+
 def caesarEncrypt(plainText, shift):
-    stringtoencrypt = input("Enter your message to encrypt: ")
-    stringtoencrypt = stringtoencrypt.lower()
-    ciphershift = input("Enter number for ciphershift: ")
-    ciphershift = int(ciphershift)
-    msgencrypted = ""
-    for ch in stringtoencrypt:
-        idx = ALPHABET.find(ch)
-        newidx = idx + ciphershift
-        if ch in letters:
-            msgencrypted += ALPHABET[newidx]
-        else:
-            msgencrypted = msgencrypted + ch
-    ciphershift = str(ciphershift)
-    print("The encrypted message is: ", msgencrypted)
-    print("You shifted over:", ciphershift)
+    for i in range(n):
+        plainText = msg_input[i]
+        idx = ALPHABET.find(msg_input)
+        newidx = (idx + cipher) % 26
+        msg_output += ALPHABET[newidx]
+print(msg_output)
+
+
+
+msg2_input = input("Enter your encrypted message: ")
+cipher2 = int(input("Enter your key: "))
+
+n2 = len(msg2_input)
+
+msg2_output = ""
 
 def caesarDecrypt(cipherText, shift):
-    stringtodecrypt = input("Enter your cipher message to decrypt: ")
-    stringtodecrypt = stringtodecrypt.lower()
-    ciphershift = input("Enter number for ciphershift: ")
-    ciphershift = int(ciphershift)
-    msg2decrypt = ""
-    for ch in stringtodecrypt:
+    for i in range(n):
+        ch = msg2_input[i]
         idx = ALPHABET.find(ch)
-        nextidx = idx + ciphershift
-        if ch in letters:
-            stringtodecrypt += ALPHABET[nextidx]
-        else:
-            stringtodecrypt += stringtodecrypt + ch
-    ciphershift = str(ciphershift)
-    print("The decrypted message is: ", msg2decrypt)
-    print("You shifted over:", ciphershift)
+        newidx = (idx + cipher) % 26
+        msg2_output += ALPHABET[newidx]
+print(msg2_output)
