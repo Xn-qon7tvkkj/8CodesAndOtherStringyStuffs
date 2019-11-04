@@ -39,18 +39,38 @@ def stripSpaces(plainText):
 # write a caesarEncrypt(plainText, shift)
 # write a caesarEncrypt(cipherText, shift)
 
-shift = 4,
-    plainText: ABCDEFGHIJKLMNOPQRSTUVWXYZ
-    cipherText: XYZABCDEFGHIJKLMNOPQRSTUV
+ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 def caesarEncrypt(plainText, shift):
     msg = input("Enter your message to encrypt: ")
-    cipherText = ""
-    print("The encrypted message is: ", cipherText)
-    return cipherText
+    msg = msg.lower()
+    ciphershift = input("Enter number for ciphershift: ")
+    ciphershift = int(ciphershift)
+    msgencrypted = ""
+    for ch in stringtoencrypt:
+        idx = ALPHABET.find(ch)
+        newidx = idx + ciphershift
+        if ch in letters:
+            msgencrypted += ALPHABET[newidx]
+        else:
+            msgencrypted = msgencrypted + ch
+    ciphershift = str(ciphershift)
+    print("The encrypted message is: ", msgencrypted)
+    print("You shifted over:", ciphershift)
 
 def caesarDecrypt(cipherText, shift):
     msg2 = input("Enter your cipher message to decrypt: ")
-    plainText = ""
-    print("The decrypted message is: ", plainText)
-    return plainText
+    msg2 = msg2.lower()
+    ciphershift = input("Enter number for ciphershift: ")
+    ciphershift = int(ciphershift)
+    msg2decrypt = ""
+    for ch in stringtodecrypt:
+        idx = ALPHABET.find(ch)
+        nextidx = idx + ciphershift
+        if ch in letters:
+            msg2 += ALPHABET[nextidx]
+        else:
+            msg2decrypt += msg2decrypt + ch
+    ciphershift = str(ciphershift)
+    print("The decrypted message is: ", msg2decrypt)
+    print("You shifted over:", ciphershift)
