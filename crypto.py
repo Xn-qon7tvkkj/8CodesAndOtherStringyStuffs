@@ -42,8 +42,10 @@ def caesarEncrypt(plainText, shift):
     msg = input("Enter your message to encrypt: ")
     cipherText = scramble2Encrypt(msg)
     print("The encrypted message is: ", cipherText)
+    return cipherText
 
 def caesarDecrypt(cipherText, shift):
     msg2 = input("Enter your cipher message to decrypt: ")
     plainText = scramble2Decrypt(msg2)
     print("The decrypted message is: ", plainText)
+    return plainText
