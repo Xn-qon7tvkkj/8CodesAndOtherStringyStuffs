@@ -39,31 +39,28 @@ def stripSpaces(plainText):
 # write a caesarEncrypt(plainText, shift)
 # write a caesarDecrypt(cipherText, shift)
 
-ALPHABET = "abcdefghijklmnopqrstuvwxyz"
-
-msg_input = input("Enter your message: ")
-cipher = int(input("Enter your key: "))
-
-n = len(msg_input)
-
-msg_output = ""
 
 def caesarEncrypt(plainText, shift):
-    for i in range(n):
-        plainText = msg_input[i]
-        idx = ALPHABET.find(msg_input)
-        newidx = (idx + cipher) % 26
-        msg_output += ALPHABET[newidx]
-print(msg_output)
+    cipher = ''
+    for char in plainText:
+        if char == ' ':
+            cipher = cipher + char
+        elif char.isupper():
+            cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
+        else:
+            cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
+
+    return cipher
+
+
+text = input("enter string: ")
+s = int(input("enter shift number: "))
+print("original string: ", text)
+print("after encryption: ", caesarEncrypt(text, s))
 
 
 
-msg2_input = input("Enter your encrypted message: ")
-cipher2 = int(input("Enter your key: "))
-
-n2 = len(msg2_input)
-
-msg2_output = ""
+ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 def caesarDecrypt(cipherText, shift):
     for i in range(n):
@@ -72,3 +69,7 @@ def caesarDecrypt(cipherText, shift):
         newidx = (idx + cipher) % 26
         msg2_output += ALPHABET[newidx]
 print(msg2_output)
+
+
+msg2_input = input("Enter your message: ")
+cipher = int(input("Enter your shift: "))
