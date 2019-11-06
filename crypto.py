@@ -46,30 +46,35 @@ def caesarEncrypt(plainText, shift):
         if char == ' ':
             cipher = cipher + char
         elif char.isupper():
-            cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
+            cipher = cipher + chr((ord(char) + shift - 65))
         else:
-            cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
+            cipher = cipher + chr((ord(char) + shift - 97))
 
     return cipher
 
 
 text = input("enter string: ")
-s = int(input("enter shift number: "))
-print("original string: ", text)
-print("after encryption: ", caesarEncrypt(text, s))
+shift = int(input("enter shift: "))
+print("original: ", text)
+print("after encryption: ", caesarEncrypt(text, shift))
 
 
 
 ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 def caesarDecrypt(cipherText, shift):
-    for i in range(n):
-        ch = msg2_input[i]
-        idx = ALPHABET.find(ch)
-        newidx = (idx + cipher) % 26
-        msg2_output += ALPHABET[newidx]
-print(msg2_output)
+    cipher = ''
+    for char in cipherText:
+        if char == ' ':
+            cipher = cipher + char
+        elif char.isupper():
+            cipher = cipher + chr((ord(char) - shift - 65) % 26 + 65)
+        else:
+            cipher = cipher + chr((ord(char) + shift - 97))
+
+    return cipher
 
 
-msg2_input = input("Enter your message: ")
-cipher = int(input("Enter your shift: "))
+text = input("Enter your message: ")
+s = int(input("Enter your shift: "))
+print("after decryption: ", caesarDecrypt(text, s))
