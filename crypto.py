@@ -46,17 +46,18 @@ def caesarEncrypt(plainText, shift):
         if char == ' ':
             cipher = cipher + char
         elif char.isupper():
-            cipher = cipher + chr((ord(char) + shift - 65))
+            cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
         else:
-            cipher = cipher + chr((ord(char) + shift - 97))
+            cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
 
     return cipher
 
+plainText = "CEASE YOUR TYPING"
+s = 4
 
-text = input("enter string: ")
-shift = int(input("enter shift: "))
-print("original: ", text)
-print("after encryption: ", caesarEncrypt(text, shift))
+print("enter string: ", plainText)
+print("enter shift: ", s)
+print("after encryption: ", caesarEncrypt(plainText, s))
 
 
 
@@ -74,7 +75,9 @@ def caesarDecrypt(cipherText, shift):
 
     return cipher
 
+cipherText = "GIEWI CSYV XCTMRK"
+s = 4
 
-text = input("Enter your message: ")
-s = int(input("Enter your shift: "))
-print("after decryption: ", caesarDecrypt(text, s))
+print("Enter your message: ", cipherText)
+print("Enter your shift: ", s)
+print("after decryption: ", caesarDecrypt(cipherText, s))
